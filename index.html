@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The MOOvie Site</title>
+  <link rel="stylesheet" href="styles.css">
+  <script type="text/template" id="movieTmpl"></script>
+</head>
+<body>
+  <header>
+    <h1>MOOvie Site</h1>
+    <img id="logo" src="assets/cow_clipartcottage.png" alt="">
+  </header>
+  <div class="content">
+    <section class="collections">
+      <article class="models">
+        <h2>Movie Title</h2>
+        <img src="http://placehold.it/250x350" alt="">
+        <p>Movie Summary goes here</p>
+        <p>rating goes here</p>
+      </article>
+      <aside class="form">
+        <form action="submit">
+          <h3>ADD MOO...</h3>
+          <input type="text" name="title" placeholder="Movie Title">
+          <textarea name="summary" id="summary" cols="30" rows="10"></textarea>
+          <input type="text" name="rating">
+          <button class="new">Add MOO</button>
+        </form>
+      </aside>
+    </section>
+  </div>
+  <footer>
+    
+  </footer>
+  <!-- libraries -->
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/underscore/underscore.js"></script>
+  <script src="bower_components/backbone/backbone.js"></script>
+
+  <!-- app files -->
+  <script src=""></script>
+  <script src=""></script>
+  <script src=""></script>
+  <script src=""></script>
+</body>
+</html>
