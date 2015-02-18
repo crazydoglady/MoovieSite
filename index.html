@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="styles.css">
   <script type="text/template" id="movieTmpl">
     <h2><%= title %></h2>
-    <img src='<% photo %>'/>
+    <img src='<%= photo %>'/>
     <p><%= summary %></p>
     <p><%= date %></p>
     <button class="deleteMovie">Delete</button>
@@ -21,14 +21,14 @@
   <div class="content">
     <section class="collections">
       <button class="createMovie">New Moo</button>
-      <article>
-      <h2>The Shawshank Redemption</h2>
-      <img src="assets/shawshank.jpeg" alt="">
-      <p>BEST MOVIE EVER! That's all you need to know.</p>
-      <p>1994</p>
-      <button class="deleteMovie">Delete</button>
-      <button class="editMovie">Edit</button>
-    </article>
+<!--<article>
+<h2>The Shawshank Redemption</h2>
+<img src="assets/shawshank.jpeg" alt="">
+<p>BEST MOVIE EVER! That's all you need to know.</p>
+<p>1994</p>
+<button class="deleteMovie">Delete</button>
+<button class="editMovie">Edit</button>
+    </article> -->
 
       <form class="createNew" action="submit">
         <input type="text" name="newTitle" placeholder="Movie Title">

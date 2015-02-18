@@ -1,7 +1,7 @@
 // Movie Model
 
 var MovieModel = Backbone.Model.extend({
-  urlRoot: 'http://tiy-fee-rest.herokuapp.com/collections/mooviesite1',
+  urlRoot: 'http://tiy-fee-rest.herokuapp.com/collections/mooviesite',
   idAttribute: '_id',
   defaults: function () {
     return {

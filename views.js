@@ -55,10 +55,10 @@ var AppView = Backbone.View.extend({
   showCreate: function () {
     // e.preventDefault();
     this.$el.find('.createNew').toggleClass('show');
-    console.log("showCreate works");
+    console.log("showCreate works")
   },
   addOneMovie: function (movie) {
-    var movieView = new movieView({model: movie});
+    var movieView = new MovieView({model: movie});
     this.$el.append(movieView.render().el);
   },
   addAllMovies: function () {
