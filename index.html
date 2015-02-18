@@ -4,7 +4,14 @@
   <meta charset="UTF-8">
   <title>The MOOvie Site</title>
   <link rel="stylesheet" href="styles.css">
-  <script type="text/template" id="movieTmpl"></script>
+  <script type="text/template" id="movieTmpl">
+    <h2><%= title %></h2>
+    <img src='<% photo %>'/>
+    <p><%= summary %></p>
+    <p><%= date %></p>
+    <button class="deleteMovie">Delete</button>
+    <button class="editMovie">Update</button>
+  </script>
 </head>
 <body>
   <header>
@@ -13,25 +20,27 @@
   </header>
   <div class="content">
     <section class="collections">
-      <article class="models">
-        <h2>Movie Title</h2>
-        <img src="http://placehold.it/250x350" alt="">
-        <p>Movie Summary goes here</p>
-        <p>rating goes here</p>
-      </article>
-      <aside class="form">
-        <form action="submit">
-          <h3>ADD MOO...</h3>
-          <input type="text" name="title" placeholder="Movie Title">
-          <textarea name="summary" id="summary" cols="30" rows="10"></textarea>
-          <input type="text" name="rating">
-          <button class="new">Add MOO</button>
-        </form>
-      </aside>
+      <button class="createMovie">New Moo</button>
+      <article>
+      <h2>The Shawshank Redemption</h2>
+      <img src="assets/shawshank.jpeg" alt="">
+      <p>BEST MOVIE EVER! That's all you need to know.</p>
+      <p>1994</p>
+      <button class="deleteMovie">Delete</button>
+      <button class="editMovie">Edit</button>
+    </article>
+
+      <form class="createNew" action="submit">
+        <input type="text" name="newTitle" placeholder="Movie Title">
+        <input type="url" name="newPhoto" placeholder= "Photo URL">
+        <textarea name="newSummary" id="newSummary" cols="30" rows="10"></textarea>
+        <input type="text" name="newDate" placeholder="Release Date">
+        <button class="new" action="submit">Add MOO</button>
+      </form>
     </section>
+
   </div>
   <footer>
-    
   </footer>
   <!-- libraries -->
   <script src="bower_components/jquery/dist/jquery.js"></script>
@@ -39,9 +48,9 @@
   <script src="bower_components/backbone/backbone.js"></script>
 
   <!-- app files -->
-  <script src=""></script>
-  <script src=""></script>
-  <script src=""></script>
-  <script src=""></script>
+  <script src="models.js"></script>
+  <script src="collection.js"></script>
+  <script src="views.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>

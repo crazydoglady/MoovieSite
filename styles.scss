@@ -15,6 +15,7 @@ h1 {
   display: inline-block;
   margin: 1% 2% 0 2%;
 }
+
 #logo {
   margin-top: 1%;
     height: 50px;
@@ -22,12 +23,11 @@ h1 {
     float: right;
   }
 
-.content {
-  background: url('assets/cow_wallpaper.jpg');
-  background-repeat: repeat;
-  background-size: cover;
-}
-
+  section {
+    width: 75%;
+    display: inline-block;
+    vertical-align: top;
+  }
   article{
     margin: 1% 0 1% 5%;
     width: 22%;
@@ -37,21 +37,23 @@ h1 {
       margin: 0 9px 0 6px;
     }
   }
-  aside {
-    width: 15%;
-    margin: 0 0 0 0;
-    float: right;
-    background: black;
-  }
+
   form {
-    margin: 35% 0 88% 4%;
+    display: none;
+    /* margin: 2% 0 2% 2%;
+    width: 22%;
+    float: right;
     height: 100%;
-    display: block;
-    input{
-      margin: 2% 0 0 2%;
-    }
+    background: black; */
+  /*   input{
+    margin: 2% 0 2% 2%;
+  } */
   }
 
   textarea{
     margin: 2% 0 0 2%;
+  }
+
+  .show {
+    display: block;
   }
