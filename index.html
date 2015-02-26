@@ -9,8 +9,9 @@
     <img src='<%= photo %>'/>
     <p><%= summary %></p>
     <p><%= date %></p>
-    <button class="deleteMovie">Delete</button>
     <button class="editMovie">Update</button>
+    <button class="deleteMovie">Delete</button>
+
   </script>
 </head>
 <body>
@@ -25,17 +26,9 @@
         <input type="url" name="newPhoto" placeholder= "Photo URL">
         <textarea name="newSummary" id="newSummary" cols="30" rows="10"></textarea>
         <input type="text" name="newDate" placeholder="Release Date">
-        <button action="submit" id="new">Add MOO</button>
+        <button type="submit" id="new">Add MOO</button>
       </form>
       <button class="createMovie">New Moo</button>
-<article>
-    <h2>The Shawshank Redemption</h2>
-    <img src="assets/shawshank.jpeg" alt="">
-    <p>BEST MOVIE EVER! That's all you need to know.</p>
-    <p>1994</p>
-  <button class="deleteMovie">Delete</button>
-  <button class="editMovie">Edit</button>
-</article>
     </section>
 
   </div>
@@ -47,9 +40,9 @@
   <script src="bower_components/backbone/backbone.js"></script>
 
   <!-- app files -->
-  <script src="models.js"></script>
-  <script src="collection.js"></script>
-  <script src="views2.js"></script>
-  <script src="main.js"></script>
+  <script src="js/models.js"></script>
+  <script src="js/collection.js"></script>
+  <script src="js/views2.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
