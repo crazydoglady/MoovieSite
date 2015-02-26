@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>The MOOvie Site</title>
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
   <link rel="stylesheet" href="styles.css">
   <script type="text/template" id="movieTmpl">
     <h2><%= title %></h2>
@@ -11,7 +12,13 @@
     <p><%= date %></p>
     <button class="editMovie">Update</button>
     <button class="deleteMovie">Delete</button>
-
+    <form action="" id="editModel">
+      <h2><input type="text" name="editTitle" value='<%= title %>'></h2>
+      <p><input type="url" name="editPhoto" value='<%=  photo %>'></p>
+      <p class="description"><textarea name="editSummary" id="editSummary" cols="30" rows="5"><%= summary %></textarea></p>
+      <p><input type="text" name="editDate" value='<%= date %>'></p>
+      <button type="submit" id="editForm">Submit</button>
+    </form>
   </script>
 </head>
 <body>
@@ -19,8 +26,11 @@
     <h1>MOOvie Site</h1>
     <img id="logo" src="assets/cow_clipartcottage.png" alt="">
   </header>
-  <div class="content">
-    <section class="collections">
+  <div class="container">
+    <section class="collections col-md-12 row">
+      <article id="formWrap">
+      <button class="createMovie">Add MOOvie</button>
+    </article>
       <form id="newMoovie" action="">
         <input type="text" name="newTitle" placeholder="Movie Title">
         <input type="url" name="newPhoto" placeholder= "Photo URL">
@@ -28,7 +38,6 @@
         <input type="text" name="newDate" placeholder="Release Date">
         <button type="submit" id="new">Add MOO</button>
       </form>
-      <button class="createMovie">New Moo</button>
     </section>
 
   </div>

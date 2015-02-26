@@ -14,11 +14,35 @@ h1 {
   display: inline-block;
   margin: 1% 2% 0 2%; }
 
+h2 {
+  display: inline-block;
+  max-width: 40%; }
+
+textarea {
+  margin: 2% 0 0 2%;
+  max-height: 50px;
+  overflow: scroll; }
+
 #logo {
   margin-top: 1%;
   height: 50px;
   width: 75px;
   float: right; }
+
+.createMovie {
+  position: absolute;
+  width: 40%;
+  height: 20px;
+  margin: 1% 0 1% 2%; }
+
+#formWrap {
+  background: black;
+  height: 40px;
+  width: 45%;
+  margin: 2% 0 1% 29%; }
+
+.editMovie, .deleteMovie {
+  vertical-align: bottom; }
 
 section {
   width: 75%;
@@ -28,14 +52,17 @@ section {
 article {
   vertical-align: top;
   margin: 1% 0 1% 5%;
-  width: 300px;
-  height: 100%;
+  width: 45%;
   display: inline-block;
-  background: black; }
+  background: black;
+  border-radius: 30px; }
   article img {
-    width: 250px;
-    height: 350px;
-    margin: 0 9px 0 25px; }
+    float: left;
+    display: inline-block;
+    width: 240px;
+    height: 300px;
+    border-radius: 15px;
+    margin: 2% 2% 2% 2%; }
 
 form {
   display: none;
@@ -47,9 +74,6 @@ form {
   /*   input{
     margin: 2% 0 2% 2%;
   } */ }
-
-textarea {
-  margin: 2% 0 0 2%; }
 
 .show {
   display: block; }

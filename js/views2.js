@@ -7,13 +7,29 @@ var MovieView = Backbone.View.extend({
   },
   events: {
     "click .deleteMovie": "removeMovie", // when delete is pressed in posts, call remove movie function
-    //"click .editMovie": "editMovie" //when edit button pressed, call editMovie function
+    "click .editMovie": "showEdit", //when edit button pressed, call editMovie function
+    "submit #editModel" : "submitEdit" //when form submitted, run submit edit function
     //click events for Models go here
+  },
+  showEdit: function() {
+    console.log('edit click');
+    this.$('#editModel').toggleClass('show');
+  },
+  submitEdit: function() {
+    console.log('submit edit');
+    event.preventDefault();
+    this.model.set({
+      photo: this.$("input[name='editPhoto']").val(),
+      title: this.$("input[name='editTitle']").val(), //grabs value of title field in create form
+      summary: this.$("textarea[name='editSummary']").val(),
+      date: this.$("input[name='editDate']").val()
+    });
+    this.model.save();
+    this.render();
   },
   render: function() {
     var markup = this.template(this.model.toJSON()); //declares that content of template is markup
     this.$el.html(markup); //insert markup into html in this location
-
     return this; //?? stops function
   },
   removeMovie: function () {
